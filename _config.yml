@@ -1,3 +1,6 @@
 # add the following to _config.yml file
-title: Patrick Stewart
-theme: jekyll-theme-minimal
+title: Patrick Stewart - My Blog
+description: Alternative site to view the blog posts I put on medium
+remote_theme: pages-themes/midnight@v0.2.0 #https://github.com/pages-themes/midnight
+plugins: 
+- jekyll-remote-theme
