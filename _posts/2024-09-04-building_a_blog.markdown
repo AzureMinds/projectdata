@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Building a personal website using Jekyll"
+date:   2024-09-04 16:14:10 +0100
+categories: [blog, personal]
+---
+
+So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, here is how I put this together and an explanation of what are the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .  
+
+Firstly, you may have noticed this site is hosted using Github pages. Github pages offers a way to host a static website (like yours truly) without paying/setting up hosting. On top of this, given my lack of web development expertise and impatience on getting something together, I have built this website using Jekyll. Jekyll is a Ruby package that transforms plain text files and written in markdown or other markup languages like HTML and processes it to create a static website. On top of this, there are a lot of pre-made templates and layout designs and a simple directory structure to build your content. In short, it's perfect for people who don't want to reinvent the wheel, building a website similar to this. For those of you looking to get started with Jekyll, I would recommend this https://jekyllrb.com/docs/installation/ if you are looking to install and setup Jekyll for the first time.
+
+
+
+
+
