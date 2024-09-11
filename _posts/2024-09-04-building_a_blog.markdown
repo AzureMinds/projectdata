@@ -9,6 +9,10 @@ So, after much procrastination, I have finally put together a personal website (
 
 Firstly, you may have noticed this site is hosted using Github pages. Github pages offers a way to host a static website (like yours truly) without paying/setting up hosting. On top of this, given my lack of web development expertise and impatience on getting something together, I have built this website using Jekyll. Jekyll is a Ruby package that transforms plain text files and written in markdown or other markup languages like HTML and processes it to create a static website. On top of this, there are a lot of pre-made templates and layout designs and a simple directory structure to build your content. In short, it's perfect for people who don't want to reinvent the wheel, building a website similar to this. For those of you looking to get started with Jekyll, I would recommend this https://jekyllrb.com/docs/installation/ if you are looking to install and setup Jekyll for the first time.
 
+Ok, so now you understand Jekyll and Github pages, I am going to outline to you how this website is setout (and yes it may change).
+
+The _config.yml file notes the configuration settings and options for my site. If you inspect the file, you will see I've included basic plugins, title, personal details, and usernames that could be useful. Currently, I feel there is a lack of plugins, themes and other configurations but I will develop these over time.
+
 
 
 
