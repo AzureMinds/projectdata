@@ -5,8 +5,6 @@ baseurl: "" # the base hostname & protocol for your site, e.g. http://example.co
 author:
   name: "Patrick Stewart"
   email: patrickstewart1@hotmail.com
-  twitter_username: "@Patrick74925271"
-  github_username:  "github.com/patstew123"
 theme: minima
 exclude:
   - readme.md

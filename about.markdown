@@ -8,5 +8,6 @@ Welcome to my blog on all things Data Science and Engineering. Here you will fin
 
 Currently I work as a Data Scientist at Fable Data, a company providing anonymised pan European data to Hedge Funds, Corporates and Public Sector Organisations. While I do spend most of my time in tabular data land, my interests extend to NLP, data engineering and different ways of storing said data.
 
-CV:[Download my CV](https://azureminds.github.io/_pdfs/Patrick_Stewart_CV_Final.pdf)
-
+CV: [Download my CV](/assets/Patrick_Stewart_CV_Final.pdf)
+LinkedIn: [Patrick Stewart](https://www.linkedin.com/in/patrick-stewart-832bb276/)
+Twitter: [Patrick Stewart](https://x.com/Patrick74925271)

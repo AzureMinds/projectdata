@@ -13,6 +13,11 @@ Ok, so now you understand Jekyll and Github pages, I am going to outline to you 
 
 The _config.yml file notes the configuration settings and options for my site. If you inspect the file, you will see I've included basic plugins, title, personal details, and usernames that could be useful. Currently, I feel there is a lack of plugins, themes and other configurations but I will develop these over time.
 
+The index.md file typically serves as the main homepage of a jekyll site. When it comes to styling markdown files, I could bore you to death with the optimum approach to this but instead if interested then this link https://docs.gruntwork.io/guides/style/markdown-style-guide/ should help.
+
+I have built (well more like borrowed) layout and styling templates that can be applied. Layouts are built using html code, I've added a couple of examples in the _layouts directory. 
+
+
 
 
 
