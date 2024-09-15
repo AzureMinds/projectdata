@@ -4,8 +4,8 @@ layout: default
 
 <article class="post">
     <header>
-        <h1>{{ page.title }}</h1>
-        <p class="meta">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="post-meta">
             Posted on {{ page.date | date: "%B %d, %Y" }}
             {% if page.categories %}
                 in
@@ -15,14 +15,17 @@ layout: default
             {% endif %}
         </p>
     </header>
-    <div class="content">
+    <div class="post-content">
         {{ content }}
     </div>
+    {% if page.tags %}
     <footer>
-        <p>Tags:
+        <p class="post-tags">Tags:
             {% for tag in page.tags %}
                 <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}
             {% endfor %}
         </p>
     </footer>
+    {% endif %}
 </article>
+

@@ -3,6 +3,7 @@ layout: post
 title:  "Building a personal website using Jekyll"
 date:   2024-09-04 16:14:10 +0100
 categories: [blog, personal]
+tags: [jekyll]
 ---
 
 So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, here is how I put this together and an explanation of what are the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .  
@@ -15,7 +16,9 @@ The _config.yml file notes the configuration settings and options for my site. I
 
 The index.md file typically serves as the main homepage of a jekyll site. When it comes to styling markdown files, I could bore you to death with the optimum approach to this but instead if interested then this link https://docs.gruntwork.io/guides/style/markdown-style-guide/ should help.
 
-I have built (well more like borrowed) layout and styling templates that can be applied. Layouts are built using html code, I've added a couple of examples in the _layouts directory. 
+In Jekyll, layouts are fundamental to structuring your website. They are stored in the _layouts directory and are written in HTML with embedded Liquid templating tags. The default.html layout typically contains the overall HTML skeleton of your site, including the <head>, <body>, and common elements like the header and footer. Within layouts, {{ content }} is used as a placeholder where the content from your Markdown files will be inserted. By using layouts, you can maintain a consistent look and feel across all your pages and posts, making it easier to manage and update your site's design.
+
+Finally, CSS is used to 
 
 
 
