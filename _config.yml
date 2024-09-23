@@ -5,7 +5,7 @@ baseurl: "" # the base hostname & protocol for your site, e.g. http://example.co
 author:
   name: "Patrick Stewart"
   email: patrickstewart1@hotmail.com
-theme: minima
+theme: minimal-mistakes-jekyll  # or any other theme you chose
 exclude:
   - readme.md
 # Build settings

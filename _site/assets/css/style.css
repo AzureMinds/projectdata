@@ -41,3 +41,12 @@
 .post-item p {
     color: #7f8c8d;
 }
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+a.dark-mode {
+    color: #bb86fc;
+}
