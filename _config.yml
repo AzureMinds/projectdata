@@ -5,7 +5,7 @@ baseurl: "" # the base hostname & protocol for your site, e.g. http://example.co
 author:
   name: "Patrick Stewart"
   email: patrickstewart1@hotmail.com
-theme: just-the-docs
+theme: minima
 exclude:
   - readme.md
 # Build settings
