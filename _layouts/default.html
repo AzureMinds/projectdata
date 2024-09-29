@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Azure Minds | Azure Minds - Blog on Data Engineering, Machine Learning and Natural Language Processing</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 <body>
     <header>
@@ -19,37 +19,7 @@
     </header>
     
     <main>
-        <section class="home-intro">
-    <p>Writing about all things machine learning and data engineering.</p>
-
-<h2 id="about-me">About Me</h2>
-
-<p><img src="assets/IMG_3319.jpg" alt="My Picture" width="300px" /></p>
-
-<p>Hello! I’m Patrick Stewart, a data science and machine learning enthusiast. I love exploring the intersections of data science, machine learning, and natural language processing.</p>
-
-<p>Currently I work as a Data Scientist at Fable Data, a company providing anonymised pan European data to Hedge Funds, Corporates and Public Sector Organisations.</p>
-
-<p>CV: <a href="/assets/Patrick_Stewart_CV_Final.pdf">Download my CV</a></p>
-
-<p>LinkedIn: <a href="https://www.linkedin.com/in/patrick-stewart-832bb276/">Patrick Stewart</a></p>
-
-<p>Twitter: <a href="https://x.com/Patrick74925271">Patrick Stewart</a></p>
-
-
-</section>
-
-<section class="recent-posts">
-    <h2>Recent Posts</h2>
-    <ul class="posts-list">
-        
-        <li>
-            <h3><a href="/blog/personal/2024/09/04/building_a_blog.html">Building a personal website using Jekyll</a></h3>
-            <p>So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of...</p>
-        </li>
-        
-    </ul>
-</section>
+        {{ content }}
     </main>
     
     <footer>

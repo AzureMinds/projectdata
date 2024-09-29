@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<section class="home-intro">
+    {{ content }}
+</section>
+
+<section class="recent-posts">
+    <h2>Recent Posts</h2>
+    <ul class="posts-list">
+        {% for post in site.posts limit:5 %}
+        <li>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

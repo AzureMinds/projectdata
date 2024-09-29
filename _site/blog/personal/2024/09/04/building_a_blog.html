@@ -1,4 +1,41 @@
-<p>So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, here is how I put this together and an explanation of what are the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a personal website using Jekyll | Azure Minds - Blog on Data Engineering, Machine Learning and Natural Language Processing</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Add your navigation items here -->
+        </nav>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </header>
+    
+    <main>
+        <article class="post">
+    <header>
+        <h1 class="post-title">Building a personal website using Jekyll</h1>
+        <p class="post-meta">
+            Posted on September 04, 2024
+            
+                in
+                
+                    <a href="/categories/blog">blog</a>, 
+                
+                    <a href="/categories/personal">personal</a>
+                
+            
+        </p>
+    </header>
+    <div class="post-content">
+        <p>So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, here is how I put this together and an explanation of what are the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .</p>
 
 <p>Firstly, you may have noticed this site is hosted using Github pages. Github pages offers a way to host a static website (like yours truly) without paying/setting up hosting. On top of this, given my lack of web development expertise and impatience on getting something together, I have built this website using Jekyll. Jekyll is a Ruby package that transforms plain text files and written in markdown or other markup languages like HTML and processes it to create a static website. On top of this, there are a lot of pre-made templates and layout designs and a simple directory structure to build your content. In short, it’s perfect for people who don’t want to reinvent the wheel, building a website similar to this. For those of you looking to get started with Jekyll, I would recommend this https://jekyllrb.com/docs/installation/ if you are looking to install and setup Jekyll for the first time.</p>
 
@@ -12,3 +49,54 @@
 
 <p>Finally, CSS is used to</p>
 
+
+    </div>
+    
+    <footer>
+        <p class="post-tags">Tags:
+            
+                <a href="/tags/jekyll">jekyll</a>
+            
+        </p>
+    </footer>
+    
+</article>
+
+
+    </main>
+    
+    <footer>
+        <!-- Add your footer content here -->
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        }
+
+        darkModeToggle.addEventListener('click', toggleTheme);
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            setTheme(currentTheme);
+        } else if (prefersDarkScheme.matches) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    </script>
+</body>
+</html>

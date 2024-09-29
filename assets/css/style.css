@@ -1,52 +1,56 @@
-/* Home Intro Styles */
-.home-intro {
-    background-color: #ecf0f1;
-    padding: 40px 20px;
-    text-align: center;
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --link-color: #0066cc;
 }
 
-.home-intro h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --link-color: #66b3ff;
 }
 
-.home-intro p {
-    font-size: 1.2em;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Recent Posts Styles */
-.recent-posts {
-    margin-top: 40px;
+a {
+    color: var(--link-color);
+    text-decoration: none;
 }
 
-.recent-posts h2 {
-    font-size: 2em;
-    border-bottom: 2px solid #bdc3c7;
-    padding-bottom: 10px;
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+#dark-mode-toggle svg {
+    stroke: var(--text-color);
+}
+
+.home-intro, .recent-posts {
+    margin-bottom: 40px;
 }
 
 .posts-list {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
-.post-item {
-    margin-bottom: 30px;
-}
-
-.post-item h3 {
-    margin-bottom: 5px;
-}
-
-.post-item p {
-    color: #7f8c8d;
-}
-
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-a.dark-mode {
-    color: #bb86fc;
+.posts-list li {
+    margin-bottom: 20px;
 }
