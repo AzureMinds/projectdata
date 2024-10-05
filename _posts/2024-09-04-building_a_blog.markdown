@@ -8,7 +8,7 @@ tags: [jekyll]
 
 So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, this post will hopefully illustrate how I put this together as well as touching on the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .
 
-<img src="assets/andrew-neel-ute2XAFQU2I-unsplash.jpg" alt="My Picture" width="300px"> 
+<img src="assets/IMG_3320.jpg" alt="My Picture" width="300px"> 
 
 Firstly, you may have noticed this site is hosted using Github pages. Github pages offers a way to host a static website (like yours truly) without paying for/setting up hosting. On top of this, given my lack of web development expertise and impatience on getting something together, I have built this website using Jekyll which is compatible with Github Pages. 
 
