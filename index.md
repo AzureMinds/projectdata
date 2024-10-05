@@ -20,3 +20,7 @@ LinkedIn: [Patrick Stewart](https://www.linkedin.com/in/patrick-stewart-832bb276
 
 Twitter: [Patrick Stewart](https://x.com/Patrick74925271)
 
+Medium: [Patrick Stewart](https://medium.com/@patrick.stewart)
+
+Github: [Patrick Stewart](https://github.com/AzureMinds)
+
