@@ -24,4 +24,5 @@ In Jekyll, layouts are fundamental to structuring your website. They are stored 
 
 The default.html layout serves as the foundation for all pages on the site. The setup is fairly standard with the exception of javascript functionality and CSS for a light and dark mode toggle. The home.html brings in the default layouts as well as the content for the home page and the content for the most recent five blog posts. Meanwhile post.html defines the layout for an individual blog post in Jekyll. 
 
+Now, all I can encourage is you check out the github structure yourself, much better to learn from understanding the repo and underlying code rather than listen to me blabber on.
 
