@@ -7,6 +7,18 @@ author:
   email: patrickstewart1@hotmail.com
 exclude:
   - readme.md
+  - vendor
+  - vendor/**
+  - vendor/bundle
+  - vendor/bundle/**
+  - node_modules
+  - node_modules/**
+  - Gemfile
+  - Gemfile.lock
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  - tmp
 # Build settings
 plugins:
   - jekyll-feed
