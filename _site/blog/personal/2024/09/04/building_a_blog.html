@@ -7,16 +7,24 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Add your navigation items here -->
+    <header class="site-header">
+    <div class="header-left">
+        <a class="brand" href="/">Patrick Stewart</a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="/#about">About</a>
+            <a href="/blog">Blog Posts</a>
         </nav>
-        <button id="dark-mode-toggle" aria-label="Toggle dark mode">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
+    </div>
+    <div class="header-right">
+        <button id="search-toggle" class="icon-button" aria-label="Search this page" title="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
-    </header>
+        <button id="dark-mode-toggle" class="icon-button" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </div>
+</header>
+
     
     <main>
         <article class="post">
@@ -35,19 +43,25 @@
         </p>
     </header>
     <div class="post-content">
-        <p>So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, here is how I put this together and an explanation of what are the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .</p>
+        <p>So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, this post will hopefully illustrate how I put this together as well as touching on the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .</p>
 
-<p>Firstly, you may have noticed this site is hosted using Github pages. Github pages offers a way to host a static website (like yours truly) without paying/setting up hosting. On top of this, given my lack of web development expertise and impatience on getting something together, I have built this website using Jekyll. Jekyll is a Ruby package that transforms plain text files and written in markdown or other markup languages like HTML and processes it to create a static website. On top of this, there are a lot of pre-made templates and layout designs and a simple directory structure to build your content. In short, it’s perfect for people who don’t want to reinvent the wheel, building a website similar to this. For those of you looking to get started with Jekyll, I would recommend this https://jekyllrb.com/docs/installation/ if you are looking to install and setup Jekyll for the first time.</p>
+<p><img src="assets/IMG_3320.jpg" alt="My Picture" width="300px" /></p>
+
+<p>Firstly, you may have noticed this site is hosted using Github pages. Github pages offers a way to host a static website (like yours truly) without paying for/setting up hosting. On top of this, given my lack of web development expertise and impatience on getting something together, I have built this website using Jekyll which is compatible with Github Pages.</p>
+
+<p>Jekyll is a Ruby package that transforms plain text files and written in markdown or other markup languages like HTML and processes it to create a static website. While some people think that the themes are what makes jekyll so attractive, I think in the chatgpt era where themes are quite easy to make, what makes Jekyll standout is it’s ability to offer easy content management. By this I mean all content I write is in markdown, which is converted to static HTML, with no database type queries resulting in fast loading times. However, to summarise it’s perfect for people who don’t want to reinvent the wheel, building a website similar to this. For those of you looking to get started with Jekyll, I would recommend this https://jekyllrb.com/docs/installation/ if you are looking to install and setup Jekyll for the first time.</p>
 
 <p>Ok, so now you understand Jekyll and Github pages, I am going to outline to you how this website is setout (and yes it may change).</p>
 
-<p>The _config.yml file notes the configuration settings and options for my site. If you inspect the file, you will see I’ve included basic plugins, title, personal details, and usernames that could be useful. Currently, I feel there is a lack of plugins, themes and other configurations but I will develop these over time.</p>
+<p>The _config.yml file notes the configuration settings and options for my site. If you inspect the file, you will see I’ve included basic plugins, title, personal details, and usernames that could be useful. You can import Jekyll themes, which is often highly desirable</p>
 
 <p>The index.md file typically serves as the main homepage of a jekyll site. When it comes to styling markdown files, I could bore you to death with the optimum approach to this but instead if interested then this link https://docs.gruntwork.io/guides/style/markdown-style-guide/ should help.</p>
 
-<p>In Jekyll, layouts are fundamental to structuring your website. They are stored in the _layouts directory and are written in HTML with embedded Liquid templating tags. The default.html layout typically contains the overall HTML skeleton of your site, including the &lt;head&gt;, &lt;body&gt;, and common elements like the header and footer. Within layouts,  is used as a placeholder where the content from your Markdown files will be inserted. By using layouts, you can maintain a consistent look and feel across all your pages and posts, making it easier to manage and update your site’s design.</p>
+<p>In Jekyll, layouts are fundamental to structuring your website. They are stored in the _layouts directory and are written in HTML with embedded Liquid templating tags. The website is structured by three HTML layout formats, default, post and home.</p>
 
-<p>Finally, CSS is used to</p>
+<p>The default.html layout serves as the foundation for all pages on the site. The setup is fairly standard with the exception of javascript functionality and CSS for a light and dark mode toggle. The home.html brings in the default layouts as well as the content for the home page and the content for the most recent five blog posts. Meanwhile post.html defines the layout for an individual blog post in Jekyll.</p>
+
+<p>Now, all I can encourage is you check out the github structure yourself, much better to learn from understanding the repo and underlying code rather than listen to me blabber on.</p>
 
 
     </div>
@@ -69,6 +83,19 @@
         <!-- Add your footer content here -->
     </footer>
 
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-title">
+        <div class="search-dialog">
+            <div class="search-header">
+                <h2 id="search-title">Search this page</h2>
+                <button id="search-close" class="icon-button" aria-label="Close search" title="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <input id="search-input" type="search" placeholder="Type to filter visible content..." aria-label="Search input">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
     <script>
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -87,7 +114,9 @@
             }
         }
 
-        darkModeToggle.addEventListener('click', toggleTheme);
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', toggleTheme);
+        }
 
         const currentTheme = localStorage.getItem('theme');
         if (currentTheme) {
@@ -97,6 +126,47 @@
         } else {
             setTheme('light');
         }
+        // Simple on-page search: filters headings and paragraphs on current page
+        const searchToggleButton = document.getElementById('search-toggle');
+        const searchModal = document.getElementById('search-modal');
+        const searchClose = document.getElementById('search-close');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+
+        function openSearch() {
+            if (!searchModal) return;
+            searchModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => searchInput && searchInput.focus(), 0);
+            updateSearchResults('');
+        }
+
+        function closeSearch() {
+            if (!searchModal) return;
+            searchModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (searchInput) searchInput.value = '';
+            if (searchResults) searchResults.innerHTML = '';
+        }
+
+        function updateSearchResults(query) {
+            if (!searchResults) return;
+            const text = (query || '').toLowerCase();
+            const nodes = Array.from(document.querySelectorAll('main h1, main h2, main h3, main p, main li'));
+            const matches = nodes.filter(n => n.textContent.toLowerCase().includes(text)).slice(0, 20);
+            searchResults.innerHTML = matches.map(n => {
+                const id = n.id || (n.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + Math.random().toString(36).slice(2, 6));
+                if (!n.id) n.id = id;
+                const snippet = n.textContent.trim().slice(0, 160);
+                return `<a href="#${id}" class="search-result-item">${snippet}</a>`;
+            }).join('');
+        }
+
+        if (searchToggleButton) searchToggleButton.addEventListener('click', openSearch);
+        if (searchClose) searchClose.addEventListener('click', closeSearch);
+        if (searchModal) searchModal.addEventListener('click', (e) => { if (e.target === searchModal) closeSearch(); });
+        if (searchInput) searchInput.addEventListener('input', (e) => updateSearchResults(e.target.value));
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
     </script>
 </body>
 </html>

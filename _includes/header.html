@@ -1,10 +1,17 @@
-<header>
-    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-    <nav>
-        <ul>
-            <li><a href="{{ site.baseurl }}/">Home</a></li>
-            <li><a href="{{ site.baseurl }}/about">About</a></li>
-            <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-        </ul>
-    </nav>
+<header class="site-header">
+    <div class="header-left">
+        <a class="brand" href="{{ '/' | relative_url }}">Patrick Stewart</a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="{{ '/' | relative_url }}#about">About</a>
+            <a href="{{ '/blog' | relative_url }}">Blog Posts</a>
+        </nav>
+    </div>
+    <div class="header-right">
+        <button id="search-toggle" class="icon-button" aria-label="Search this page" title="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button id="dark-mode-toggle" class="icon-button" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </div>
 </header>

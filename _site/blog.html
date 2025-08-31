@@ -7,16 +7,24 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Add your navigation items here -->
+    <header class="site-header">
+    <div class="header-left">
+        <a class="brand" href="/">Patrick Stewart</a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="/#about">About</a>
+            <a href="/blog">Blog Posts</a>
         </nav>
-        <button id="dark-mode-toggle" aria-label="Toggle dark mode">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
+    </div>
+    <div class="header-right">
+        <button id="search-toggle" class="icon-button" aria-label="Search this page" title="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
-    </header>
+        <button id="dark-mode-toggle" class="icon-button" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </div>
+</header>
+
     
     <main>
         <h1>Latest Posts</h1>
@@ -25,7 +33,7 @@
   
     <li>
       <h2><a href="/blog/personal/2024/09/04/building_a_blog.html">Building a personal website using Jekyll</a></h2>
-      <p>So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, here is how I put this together and an explanation of what are the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .</p>
+      <p>So, after much procrastination, I have finally put together a personal website (of sorts) to keep better track of blog posts, personal projects and general ramblings. In the interest of clarity and for those of you interested, this post will hopefully illustrate how I put this together as well as touching on the key components. Note: If you are reading this on Medium then the links for my website and associated Github page are https://azureminds.github.io/ and https://github.com/AzureMinds/azureminds.github.io .</p>
 
 
     </li>
@@ -36,6 +44,19 @@
     <footer>
         <!-- Add your footer content here -->
     </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-title">
+        <div class="search-dialog">
+            <div class="search-header">
+                <h2 id="search-title">Search this page</h2>
+                <button id="search-close" class="icon-button" aria-label="Close search" title="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <input id="search-input" type="search" placeholder="Type to filter visible content..." aria-label="Search input">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
 
     <script>
         const darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -55,7 +76,9 @@
             }
         }
 
-        darkModeToggle.addEventListener('click', toggleTheme);
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', toggleTheme);
+        }
 
         const currentTheme = localStorage.getItem('theme');
         if (currentTheme) {
@@ -65,6 +88,47 @@
         } else {
             setTheme('light');
         }
+        // Simple on-page search: filters headings and paragraphs on current page
+        const searchToggleButton = document.getElementById('search-toggle');
+        const searchModal = document.getElementById('search-modal');
+        const searchClose = document.getElementById('search-close');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+
+        function openSearch() {
+            if (!searchModal) return;
+            searchModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => searchInput && searchInput.focus(), 0);
+            updateSearchResults('');
+        }
+
+        function closeSearch() {
+            if (!searchModal) return;
+            searchModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (searchInput) searchInput.value = '';
+            if (searchResults) searchResults.innerHTML = '';
+        }
+
+        function updateSearchResults(query) {
+            if (!searchResults) return;
+            const text = (query || '').toLowerCase();
+            const nodes = Array.from(document.querySelectorAll('main h1, main h2, main h3, main p, main li'));
+            const matches = nodes.filter(n => n.textContent.toLowerCase().includes(text)).slice(0, 20);
+            searchResults.innerHTML = matches.map(n => {
+                const id = n.id || (n.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + Math.random().toString(36).slice(2, 6));
+                if (!n.id) n.id = id;
+                const snippet = n.textContent.trim().slice(0, 160);
+                return `<a href="#${id}" class="search-result-item">${snippet}</a>`;
+            }).join('');
+        }
+
+        if (searchToggleButton) searchToggleButton.addEventListener('click', openSearch);
+        if (searchClose) searchClose.addEventListener('click', closeSearch);
+        if (searchModal) searchModal.addEventListener('click', (e) => { if (e.target === searchModal) closeSearch(); });
+        if (searchInput) searchInput.addEventListener('input', (e) => updateSearchResults(e.target.value));
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
     </script>
 </body>
 </html>
