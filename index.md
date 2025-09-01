@@ -1,10 +1,10 @@
 ---
-layout: home  # Use your default layout or create a custom one
-title: "Welcome to Azure Minds"
+layout: home
+title: "Welcome to Project Data"
 permalink: /
 ---
 
-Writing about all things machine learning and data engineering.
+Welcome to my blog on all things Product Management and Data. Here you will find musings (hopefully with some slight humour) and projects (both completed and upcoming).
 
 ## About Me {#about}
 
@@ -12,7 +12,7 @@ Writing about all things machine learning and data engineering.
   <img class="avatar" src="assets/IMG_3319.jpg" alt="Patrick Stewart">
   <div class="bio">
     <p>Hello! I'm Patrick Stewart, a data science and machine learning enthusiast. I love exploring the intersections of data science, machine learning, and natural language processing.</p>
-    <p>Currently I work as a Data Scientist at Fable Data, a company providing anonymised pan European data to Hedge Funds, Corporates and Public Sector Organisations.</p>
+    <p>Currently I work as a Technical Product Manager at Risilience, a startup working to quantify and strategise climate related risks for clients.</p>
     <div class="social-links">
       <a href="/assets/Patrick_Stewart_CV_Final.pdf" aria-label="CV" title="CV">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
@@ -34,4 +34,23 @@ Writing about all things machine learning and data engineering.
 </div>
 
 ## Recent Posts
+
+<div class="posts">
+  {% for post in site.posts limit:5 %}
+    <article class="post-preview">
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      </div>
+      <div class="post-excerpt">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+      </div>
+      <a href="{{ post.url }}" class="read-more">Read more →</a>
+    </article>
+  {% endfor %}
+</div>
+
+<div class="view-all-posts">
+  <a href="/blog/" class="btn">View All Posts</a>
+</div>
 

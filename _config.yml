@@ -1,7 +1,7 @@
-title: Azure Minds - Blog on Data Engineering, Machine Learning and Natural Language Processing
+title: Project Data - Blog on Data Engineering, Machine Learning and Natural Language Processing
 description: Writing about all things machine learning and data engineering.
-url: "https://yourusername.github.io/blog" # the subpath of your site, e.g. /blog
-baseurl: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://projectdata.github.io"  # Updated URL
+baseurl: ""
 author:
   name: "Patrick Stewart"
   email: patrickstewart1@hotmail.com
@@ -19,6 +19,8 @@ exclude:
   - .jekyll-cache
   - .sass-cache
   - tmp
+  - _site
+  - _site/**
 # Build settings
 plugins:
   - jekyll-feed
