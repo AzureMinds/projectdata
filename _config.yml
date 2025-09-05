@@ -1,7 +1,7 @@
 title: Project Data - Blog on Data Engineering, Machine Learning and Natural Language Processing
 description: Writing about all things machine learning and data engineering.
 url: "https://azureminds.github.io"
-baseurl: "/projectdata.github.io"
+baseurl: ""
 author:
   name: "Patrick Stewart"
   email: patrickstewart1@hotmail.com
