@@ -4,29 +4,16 @@ title: "Welcome to Project Data"
 permalink: /
 ---
 
-<div class="hero">
-  <div class="hero-content">
-    <h1 class="hero-title">Data-Driven Insights & Product Strategy</h1>
-    <p class="hero-subtitle">Exploring the intersection of data science, machine learning, and product management</p>
-    <div class="hero-cta">
-      <a href="/blog/" class="btn btn-primary">Read My Blog</a>
-      <a href="/about" class="btn btn-secondary">Learn More</a>
-    </div>
-  </div>
-</div>
+Welcome to my blog on all things Product Management and Data. Here you will find musings (hopefully with some slight humour) and projects (both completed and upcoming).
 
-<div class="intro-section">
-  <p>Welcome to my blog on all things Product Management and Data. Here you will find musings (hopefully with some slight humour) and projects (both completed and upcoming).</p>
-  
-  <p>Currently I work as a Technical Product Manager at Risilience, a startup working to quantify and strategise climate related risks for clients. Historically, I worked on data related problems (both the sexy stuff and the plumbing) across various startups and consulting practices.</p>
-</div>
+Currently I work as a Technical Product Manager at Risilience, a startup working to quantify and strategise climate related risks for clients. Historically, I worked on data related problems (both the sexy stuff and the plumbing) across various startups and consulting practices.
 
 ## About Me {#about}
 
 <div class="about">
   <img class="avatar" src="assets/IMG_3319.jpg" alt="Patrick Stewart">
   <div class="bio">
-    <p>Hello! I'm Patrick Stewart, a data science and machine learning enthusiast. I love exploring the intersections of product and data.</p>
+    <p>Hello! I'm Patrick Stewart, a data science and machine learning enthusiast. I love exploring the intersections of data science, machine learning, and natural language processing.</p>
     <p>Currently I work as a Technical Product Manager at Risilience, a startup working to quantify and strategise climate related risks for clients.</p>
     <div class="social-links">
       <a href="/assets/Patrick_Stewart_CV_Final.pdf" aria-label="CV" title="CV">
