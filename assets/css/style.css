@@ -59,7 +59,12 @@ img {
 
 /* About section media layout */
 .about { display: grid; grid-template-columns: 140px 1fr; gap: 16px; align-items: start; }
-.about .avatar { width: 140px; border-radius: 10px; }
+.about .avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    object-fit: cover; /* This ensures the image maintains aspect ratio */
+}
 .about .bio { font-size: 1rem; }
 .social-links { display: flex; gap: 10px; margin-top: 10px; }
 .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(0,0,0,0.05); color: var(--text-color); }
@@ -203,8 +208,13 @@ img {
 [data-theme="dark"] .search-result-item:hover { background: rgba(255,255,255,0.08); }
 
 @media (max-width: 640px) {
-  .about { grid-template-columns: 100px 1fr; }
-  .about .avatar { width: 100px; }
-  .page-header h1 { font-size: 2rem; }
-  .post-preview, .post-item { padding: 15px; }
+    .about { 
+        grid-template-columns: 100px 1fr; 
+    }
+    .about .avatar { 
+        width: 100px; 
+        height: 100px;
+    }
+    .page-header h1 { font-size: 2rem; }
+    .post-preview, .post-item { padding: 15px; }
 }

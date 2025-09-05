@@ -17,20 +17,8 @@
         <!-- Add your footer content here -->
     </footer>
 
-    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-title">
-        <div class="search-dialog">
-            <div class="search-header">
-                <h2 id="search-title">Search this page</h2>
-                <button id="search-close" class="icon-button" aria-label="Close search" title="Close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </button>
-            </div>
-            <input id="search-input" type="search" placeholder="Type to filter visible content..." aria-label="Search input">
-            <div id="search-results" class="search-results"></div>
-        </div>
-    </div>
-
     <script>
+        // Dark mode functionality
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -52,6 +40,7 @@
             darkModeToggle.addEventListener('click', toggleTheme);
         }
 
+        // Set initial theme
         const currentTheme = localStorage.getItem('theme');
         if (currentTheme) {
             setTheme(currentTheme);
@@ -60,47 +49,6 @@
         } else {
             setTheme('light');
         }
-        // Simple on-page search: filters headings and paragraphs on current page
-        const searchToggleButton = document.getElementById('search-toggle');
-        const searchModal = document.getElementById('search-modal');
-        const searchClose = document.getElementById('search-close');
-        const searchInput = document.getElementById('search-input');
-        const searchResults = document.getElementById('search-results');
-
-        function openSearch() {
-            if (!searchModal) return;
-            searchModal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-            setTimeout(() => searchInput && searchInput.focus(), 0);
-            updateSearchResults('');
-        }
-
-        function closeSearch() {
-            if (!searchModal) return;
-            searchModal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            if (searchInput) searchInput.value = '';
-            if (searchResults) searchResults.innerHTML = '';
-        }
-
-        function updateSearchResults(query) {
-            if (!searchResults) return;
-            const text = (query || '').toLowerCase();
-            const nodes = Array.from(document.querySelectorAll('main h1, main h2, main h3, main p, main li'));
-            const matches = nodes.filter(n => n.textContent.toLowerCase().includes(text)).slice(0, 20);
-            searchResults.innerHTML = matches.map(n => {
-                const id = n.id || (n.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + Math.random().toString(36).slice(2, 6));
-                if (!n.id) n.id = id;
-                const snippet = n.textContent.trim().slice(0, 160);
-                return `<a href="#${id}" class="search-result-item">${snippet}</a>`;
-            }).join('');
-        }
-
-        if (searchToggleButton) searchToggleButton.addEventListener('click', openSearch);
-        if (searchClose) searchClose.addEventListener('click', closeSearch);
-        if (searchModal) searchModal.addEventListener('click', (e) => { if (e.target === searchModal) closeSearch(); });
-        if (searchInput) searchInput.addEventListener('input', (e) => updateSearchResults(e.target.value));
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
     </script>
 </body>
 </html>

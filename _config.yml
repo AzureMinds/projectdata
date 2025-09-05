@@ -1,7 +1,7 @@
 title: Project Data - Blog on Data Engineering, Machine Learning and Natural Language Processing
 description: Writing about all things machine learning and data engineering.
-url: "https://azureminds.github.io"  # Keep this as your actual GitHub Pages URL
-baseurl: "/projectdata.github.io"   # Add this for the repository name
+url: "https://azureminds.github.io"
+baseurl: "/projectdata.github.io"
 author:
   name: "Patrick Stewart"
   email: patrickstewart1@hotmail.com
@@ -21,7 +21,6 @@ exclude:
   - tmp
   - _site
   - _site/**
-# Build settings
 plugins:
   - jekyll-feed
 
